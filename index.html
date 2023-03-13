@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Roleta</title>
+    <link rel="icon" type="image/png" href="icon1.png"/>
+    
+     
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+
+        }
+        body {
+            height: 100vh;
+            background-image: url(background.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        main{
+            
+            width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            width: 100%;
+            margin-bottom: 10px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 5px;
+            font-weight: bold;
+        }
+        h1{
+            color: #000000;
+            font-size: 50px;
+            align-items: center;
+        }
+        h2 {
+            color: #a80000;
+            font-size: 50px;
+            align-items: center;
+            
+        }
+        h3 {
+            color: #ffffff;
+            font-size: 15px;
+            align-items: center;
+        }
+        p{
+            color: #ffffff;
+            font-size: 15px;
+            align-items: center;
+            
+        }
+        
+        
+        footer{
+            display: block;
+        }
+        div.dois {
+            width:0;
+            height:0;
+            border: 25px solid;
+            border-color: #ffffff;
+            border-width: 0 80px 50px 0px;
+        }
+        div {
+            width: 100%;
+            display: flex;
+            color: #ffffff;
+            font-size: 50px;
+            }
+
+        
+    </style>
+</head>
+<body>
+    
+    <main>
+        <h2>ROLETANDO </h2>
+        <p>___________________________________</p>
+        <h3>BOOT MENU</h3>
+        <div class="dois">
+            <h1 id ='contador'>0</h1>
+        </div> <br>
+        <div>
+
+        <button onclick="somar()">1 / 2 / 3 / 4 / 5 / 6</button>
+       <h4>+1</h4>
+        </div>
+
+        <div>
+        <button onclick="somar()">11 / 12 / 13 / 14 / 15 / 16</button>
+        <h4>+1</h4>
+        </div>
+
+        <div>
+        <button onclick="somar()">21 / 22 / 23 / 24 / 25 / 26</button>
+        <h4>+1</h4>
+        </div>
+
+        <div>
+        <button onclick="somar()">31 / 32 / 33 / 34 / 35 / 36</button>
+        <h4>+1</h4>
+        </div>
+
+        <div>
+        <button onclick="zero()">7 / 8 / 9 / 27 / 28 / 29</button>
+        <h4>+0</h4>
+        </div>
+        
+        <div>
+        <button onclick="diminuir()">10 / 20 / 30</button>
+        <h4>-1</h4>
+        </div>
+
+        <div>
+        <button onclick="diminuir()">0</button>
+        <h4>-1</h4>
+        </div>
+
+        <button onclick="zerar()">Zerar</button>
+
+
+    </main>
+    <script>
+        let contador = document.getElementById('contador');
+        function somar() {
+            contador.innerHTML = parseInt(contador.innerHTML) +1 ;
+
+        }
+        function diminuir() {
+            contador.innerHTML = parseInt(contador.innerHTML) -1 ;
+
+        }function zero() {
+            contador.innerHTML = parseInt(contador.innerHTML) +0 ;
+
+        }
+        function zerar(){
+            contador.innerHTML = '0'
+        }
+
+    </script>
+    <footer>
+        <nav>
+        <ul>
+            
+        </ul>
+        </nav>
+    </footer>
+</body>
+</html>
